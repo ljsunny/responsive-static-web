@@ -1,0 +1,27 @@
+@import url("./global.css");
+
+
+  header {
+    height:117px;
+  }
+  .wrapper {
+    width: 1156px;
+    margin: 0 auto;
+  }
+
+  nav {
+    display:flex;
+    align-items:center;
+    
+    ul {
+      display:flex;
+    }
+
+    .logo {
+      width:59px;
+    }
+    
+    .icon-wrap {
+      display:flex;
+    }
+  }
