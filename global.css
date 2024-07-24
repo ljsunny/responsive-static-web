@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Global */
 :root {
     /* Color */
     --color-white: #fff;
     --color-black: #000;
     --color-blue: #0070d2;
-    --color-green: #008827;
+    --color-green: #2c5234;
     --color-primary: #00a1e0;
-    --color-red: #c00;
+    --color-red: #8C1E28;
     --color-success: var(--color-green);
     --color-danger: var(--color-red);
     --color-light-blue: #7ed0ee;
-    --color-grey1: #f9f9f9;
+    --color-grey1: #f0f0f0;
     --color-grey2: #eee;
     --color-grey3: #ccc;
     --color-grey4: #999;
@@ -20,11 +23,12 @@
     --color-grey8: #333;
   
     /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
+    --font-large: 80px;
+    --font-medium: 33px;
     --font-regular: 18px;
     --font-small: 16px;
     --font-micro: 14px;
+    --font-super-micro: 10px;
   
     /* Font weight */
     --weight-bold: 700;
@@ -50,10 +54,12 @@
   }
   body {
     position: relative;
+    font-family: "Poppins", sans-serif;
   }
   a {
     text-decoration: none;
     color: var(--color-grey8);
+    cursor: pointer;
   }
   ul {
     list-style: none;
@@ -89,10 +95,24 @@
   }
   
   p {
-    font-size: var(--font-regular);
-    font-weight: var(--font-regular);
+    font-size: var(--font-micro);
+    font-weight: var(--font-micro);
     margin: 4px 0;
   }
   ul {
     list-style: none;
+  }
+  .font-selif {
+    font-family: "Noto Serif", serif;
+    font-weight:normal;
+  }
+  .wrapper {
+    max-width: 1420px;
+    min-width: 1400px;
+    margin: 0 auto;
+  }
+  .wrapper-small {
+    max-width: 1280px;
+    min-width: 1080px;
+    margin: 0 auto;
   }

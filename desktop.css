@@ -1,27 +1,447 @@
 @import url("./global.css");
 
 
-  header {
-    height:117px;
-  }
-  .wrapper {
-    width: 1156px;
-    margin: 0 auto;
-  }
+header {
+  position:fixed;
+  width: 100%;
+  z-index:999;
+  filter: drop-shadow(0 1mm 1mm rgba(0, 0, 0, .1));
+}
 
-  nav {
+banner {
+  display:flex;
+  background-color: var(--color-black);
+
+  .flex-wrap {
     display:flex;
-    align-items:center;
-    
-    ul {
-      display:flex;
-    }
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 4px;
+  }
 
-    .logo {
-      width:59px;
-    }
-    
-    .icon-wrap {
+  p {
+    color:var(--color-white);
+    text-align:center;
+    font-size: var(--font-super-micro);
+  }
+  .right-wrap {
+    display:flex;
+    gap: 10px;
+    a {
       display:flex;
+      font-size:var(--super-micro);
+      color:var(--color-white);
+      font-size: var(--font-super-micro);
+      
+      img {
+        margin-left: 5px;
+      }
+
+      img:nth-child(1) {
+        width:16px;
+        height:15px
+      }
+      img:nth-child(2) {
+        width:12px;
+        height:12px
+      }
+      img:nth-child(3) {
+        width:25px;
+        height:13px
+      }
     }
   }
+}
+
+nav {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  font-size: var(--font-micro);
+  gap:65px;
+  padding: 30px 70px;
+  background-color:var(--color-white);
+
+  a {
+    letter-spacing: 0.0625rem;
+    font-size: 0.8125rem;
+  }
+  
+  ul {
+    display:flex;
+    gap:40px;
+  }
+
+  .logo {
+    width:59px;
+  }
+  
+  .icon-wrap {
+    display:flex;
+    img {
+      width: 16px;
+      margin-right:32px;
+    }
+  }
+}
+
+.hero-section {
+  background-image: url("./img/hp-hero-dsk.jpg");
+  background-repeat : no-repeat;
+  background-position:bottom;
+  background-size : cover;
+  height:100vh;
+  margin: 0 auto;
+  position:relative;
+
+  h1, h2, a {
+    color: var(--color-white);
+    font-weight: normal;
+    text-align:center;
+    margin:0;
+  }
+
+  .content {
+    display:flex;
+    max-width: 1000px;
+    height:100%;
+    justify-content:space-evenly;
+    align-items:center;
+    margin: 0 auto;
+    
+    .right {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      max-width:500px;
+    }
+  }
+
+  .btn-wrap {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+    margin:3rem 0 0 auto;
+    .btn {
+      background-color:var(--color-white);
+      color:var(--color-red);
+      padding: 16px 30px;
+      border-radius: 4px;
+      width:162.55px;
+    }
+    .btn:nth-child(odd) {
+      margin-left:auto;
+    }
+    .btn:hover {
+      background-color: var(--color-red);
+      color: var(--color-white);
+    }
+  }
+  a {
+    position: absolute;
+    bottom: 32px;
+    font-size: 12px;
+    
+  }
+}
+
+.container1 {
+  padding: 76px 0;
+
+  h2 {
+    font-size: 38px;
+    padding: 0 120px 30px;
+  }
+
+  .slide-container {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      border-radius: var(--size-border-radius);
+      width:38px;
+      height:38px;
+      background: rgba(0, 0, 0, .4);
+      margin:0 20px;
+
+      .left {
+      transform: scale(-1, 1);
+      filter: invert(100%);
+      }
+
+      .right {
+        filter: invert(100%);
+      }
+
+    }
+    .imgage-container {
+      display:flex;
+      width: 1370px;
+      gap: 30px;
+      flex-wrap:nowrap;
+      overflow:hidden;
+
+      .box {
+        width:320px;
+
+        img {
+          width: 100%;
+        }
+
+        .content {
+          display:flex;
+
+          span {
+            display:inline-flex;
+            padding: 2px 3px;
+            font-size: 8px;
+            border: .5px solid var(--color-grey8);
+          }
+
+          .column {
+            display:flex;
+            flex-direction:column;
+          }
+
+        }
+
+        .img-wrap {
+          position: relative;
+
+          .quick-panel {
+            opacity:0;
+            display:flex;
+            position: absolute;
+            bottom:0;
+            width: 100%;
+            background: rgba(0,0,0,.7);
+            z-index:999;
+            transition: opacity 0.5s ease-in;
+
+            div {
+              width: 50%;
+              display:flex;
+              justify-content:center;
+              padding: 30px 20px;
+              color: white;
+            }
+          }
+        }
+        &:hover {
+          .quick-panel {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container2 {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  div {
+    height:900px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top: 40px;
+
+    p, h2, a {
+      color: var(--color-white);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 26px;
+    }
+
+    p,a {
+      font-size: 0.8rem;
+    }
+
+  }
+
+  div:nth-child(1) {
+    background-image: url("./img/hp-ft-01.jpg");
+  }
+  div:nth-child(2) {
+    background-image: url("./img/hp-ft-02.jpg");
+  }
+  div:nth-child(3) {
+    background-image: url("./img/hp-ft-03.jpg");
+  }
+  div:nth-child(4) {
+    background-image: url("./img/hp-ft-04.jpg");
+  }
+}
+
+.container3 {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  height: 612px;
+
+  .txt-wrap {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color:var(--color-grey1);
+
+    .txt-center {
+      width: 450px;
+      display:flex;
+      flex-direction:column;
+      align-items:start;
+    }
+
+    button {
+      width: 163px;
+      height: 48px; 
+      background-color: var(--color-grey8);
+      padding: 5px 10px;
+      color: var(--color-white);
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+  }
+  .img-wrap {
+    background-image: url("./img/hp-ft-05.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+}
+footer {
+  .row {
+    display: flex;
+  }
+  .column {
+    display:flex;
+    flex-direction:column;
+  }
+
+  .news-letter {
+    padding: 38px 0 40px;
+    margin-top: 50px;
+    background-color: var(--color-grey8);
+    color: var(--color-white);
+    
+    .news-container {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    p {
+      font-size: var(--font-super-micro);
+    }
+
+    h2 {
+      color:var(--color-white);
+      margin-top:0;
+    }
+    
+    a {
+      color: var(--color-white);
+      text-decoration: underline;
+    }
+
+    .news-wrapper {
+      max-width:80%;
+      display:flex;
+      img {
+        margin-right: 25px;
+        margin-top: 10px;
+      }
+    }
+
+    .flex-justify-center {
+      justify-content:center;
+    }
+
+    .flex-align-top {
+      align-items: flex-start;
+    }
+
+    .email-form{
+      position: relative;
+      max-width: 450px;
+      
+      input[type=text] {
+        border:none;
+        width: 100%;
+        padding: 15px 25px;
+        border-radius:var(--size-border-radius);
+        background-color:var(--color-grey6);
+      }
+
+      button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color:var(--color-grey2);
+        padding: 10px;
+        border-radius: var(--size-border-radius);
+      }
+    }
+
+    .checkbox-wrap {
+      display:flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 12px;
+      
+      input[type=checkbox] {
+        margin-right: 10px;
+      }
+      label {
+        margin-right: 20px;
+      }
+    }
+  }
+  .quick-nav {
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    padding:35px 0;
+
+
+    .box > a{
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: var(--font-micro);
+
+      &:hover {
+        color: var(--color-green);
+        text-decoration: underline;
+      }
+      
+      img {
+        width: 19px;
+        height:20px;
+      }
+    }
+  }
+  hr {
+    border: 1px solid var(--color-grey2);
+  }
+  .quick-bottom-nav {
+    width: 100%;
+    justify-content:space-between;
+    padding:35px 0;
+  }
+}
