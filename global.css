@@ -98,6 +98,8 @@
     font-size: var(--font-micro);
     font-weight: var(--font-micro);
     margin: 4px 0;
+    letter-spacing: .00399rem;
+    line-height:1.25rem;
   }
   ul {
     list-style: none;
@@ -114,5 +116,10 @@
   .wrapper-small {
     max-width: 1280px;
     min-width: 1080px;
+    margin: 0 auto;
+  }
+  .wrapper-footer {
+    max-width: 960px;
+    min-width: 900px;
     margin: 0 auto;
   }
