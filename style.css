@@ -557,8 +557,16 @@ footer {
 
     div {
       height: 60vh;
-      background-position: bottom center;
+      background-position: center center;
       justify-content:center;
+      transition: background-size .3s ease;
+      -moz-transition: background-size .3s ease;
+      -web-kit-transition: background-size .3s ease;
+
+      &:hover {
+        background-position: center center;
+        background-size: 120%;
+      }
 
       h2 {
         font-size: 1.5rem;
@@ -677,10 +685,19 @@ footer {
 
       .footer-column {
         border-right:none;
+
         .footer-box {
           border-bottom: 1px solid var(--color-grey2);
         }
       }
+      .sns {
+        padding: 40px 30px 0;
+        gap: 2px;
+      }
+    }
+    .copyright-container {
+      flex-direction: column;
+      align-items: center;
     }
     
   }
