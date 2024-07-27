@@ -55,6 +55,7 @@
   body {
     position: relative;
     font-family: "Poppins", sans-serif;
+    overflow-x:hidden;
   }
   a {
     text-decoration: none;
@@ -74,14 +75,14 @@
   
   /* Typography  */
   h1 {
-    font-size: var(--font-large);
+    font-size: 5rem;
     font-weight: var(--weight-bold);
     color: var(--color-black);
     margin: 16px 0px;
   }
   
   h2 {
-    font-size: var(--font-medium);
+    font-size: 2.0625rem;
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0;
@@ -110,16 +111,14 @@
   }
   .wrapper {
     max-width: 1420px;
-    min-width: 1400px;
     margin: 0 auto;
   }
   .wrapper-small {
     max-width: 1280px;
-    min-width: 1080px;
     margin: 0 auto;
   }
   .wrapper-footer {
     max-width: 960px;
-    min-width: 900px;
     margin: 0 auto;
   }
+
