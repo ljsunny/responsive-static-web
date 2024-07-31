@@ -587,13 +587,88 @@ footer {
     }
   }
 }
+#faq {
+  .faq-header {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 70px 20px 100px;
+    background-color:var(--color-green);
+    color:var(--color-white);
 
-.faq-header {
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  margin: 70px 20px 100px;
+    h2 {
+        color:var(--color-white);
+    }
+  }
+
+  .faq-main {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 40px 0;
+
+    h2 {
+      color:var(--color-green);
+    }
+
+    .accordion-check {
+      display:none;
+      /* not check */
+      & + label {
+        background-image: url('./img/icon-down.svg');
+        background-repeat:no-repeat;
+      }
+      /* checked */
+      &:checked + label {
+        background-image: url('./img/icon-up.svg');
+  
+        background-repeat:no-repeat;
+      }
+    }
+
+    .accordion {
+      display:flex;
+      flex-direction:column;
+      margin-top: 50px;
+      width: 60vw;
+
+      input[type="checkbox"] {
+        display: none;
+      }
+      .accordion-header {
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        border-bottom: 1px solid var(--color-grey2);
+        padding-bottom:50px;
+        font-weight: 500;
+
+        label {
+          display:block;
+          width: 15px;
+          height:15px;
+          cursor:pointer;
+        }
+      }
+      .accordion-header:has(span input:checked) ~ .accordion-wrapper {
+        display:flex;
+        flex-direction: column;
+        overflow:wrap;
+        height:auto;
+      }
+      .accordion-wrapper {
+        display:none;
+        background-color:var(--color-grey1);
+        padding: 20px 70px;
+        flex-wrap: wrap;
+        p {
+          white-space:pre-wrap;
+        }
+      }
+    }
+  }
 }
+
 /* Mobile */
 @media screen and (max-width:1000px) {
   banner {
@@ -796,6 +871,17 @@ footer {
       overflow:scroll;
       .page-items {
         font-size: 0.7rem;
+      }
+    }
+  }
+  #faq {
+    .faq-main {
+      padding: 0 10px;
+      .accordion {
+        width: 100%;
+        .accordion-wrapper {
+          padding: 2rem;
+        }
       }
     }
   }
