@@ -172,7 +172,7 @@ main {
 }
 
 .container1 {
-  padding: 76px 0;
+  padding: 76px 20px;
 
   h2 {
     font-size: 38px;
@@ -180,11 +180,11 @@ main {
   }
 
   .slide-container {
-    width: 100%;
+    width: 90%;
     display:flex;
     justify-content: center;
     align-items: center;
-
+    margin: 0 auto;
     
     .product-wrapper {
       flex-wrap:nowrap;
@@ -198,7 +198,7 @@ main {
       width:38px;
       height:38px;
       background: rgba(0, 0, 0, .4);
-      margin:0 20px;
+      margin:0;
 
       .left {
       transform: scale(-1, 1);
@@ -847,6 +847,8 @@ footer {
   .container1 {
     .slide-container {
       padding: 0 10px;
+      justify-content:flex-start;
+      overflow-x:scroll;
       .arrow {
         display:none;
       }
@@ -1011,8 +1013,13 @@ footer {
     }
   }
   #faq {
+    .faq-header {
+      text-align:center;
+    }
     .faq-main {
       padding: 0 10px;
+      text-align: center;
+      margin:4rem 0 2rem;
       .accordion {
         width: 100%;
         .accordion-wrapper {
