@@ -644,7 +644,7 @@ footer {
       display:flex;
       flex-direction:column;
       margin-top: 50px;
-      width: 60vw;
+      width: 70vw;
 
       input[type="checkbox"] {
         display: none;
@@ -667,13 +667,17 @@ footer {
       .accordion-header:has(span > input[type=checkbox]:checked) ~ .accordion-wrapper {
         display:flex;
         flex-direction: column;
-        overflow:wrap;
+        overflow:scroll;
+        max-height:50vh;
         height:auto;
+        h3 {
+          display:block;
+        }
       }
       .accordion-wrapper {
         display:none;
         background-color:var(--color-grey1);
-        padding: 20px 70px;
+        padding: 20px 50px;
         flex-wrap: wrap;
         p {
           white-space:pre-wrap;
