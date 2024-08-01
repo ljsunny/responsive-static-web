@@ -94,6 +94,9 @@ nav {
     }
   }
 }
+main {
+  overflow:hidden;
+}
 .hero-section {
   margin: 0 auto;
   position:relative;
@@ -527,7 +530,7 @@ footer {
   display:flex;
   flex-direction:column;
   align-items: center;
-  margin: 70px 20px 100px;
+  margin: 70px auto 100px;
   overflow:hidden;
 
   h2{
@@ -629,12 +632,12 @@ footer {
       display:none;
       /* not check */
       & + label {
-        background-image: url('./img/icon-down.svg');
+        background-image: url('./img/icon/icon-down.svg');
         background-repeat:no-repeat;
       }
       /* checked */
       &:checked + label {
-        background-image: url('./img/icon-up.svg');
+        background-image: url('./img/icon/icon-up.svg');
   
         background-repeat:no-repeat;
       }
@@ -774,7 +777,7 @@ footer {
         width: 24px;
         height: 24px;
         cursor:pointer;
-        background-image: url('../img/icon-hamburger.svg');
+        background-image: url('../img/icon/icon-hamburger.svg');
         background-size: cover;
       }
     }
@@ -816,7 +819,7 @@ footer {
           position:absolute;
           top:20%;
           right:5%;
-          background-image: url('../img/icon-close.svg');
+          background-image: url('../img/icon/icon-close.svg');
           &:before {
             position:absolute;
             content:'close';
@@ -923,12 +926,12 @@ footer {
       display:none;
       /* not check */
       & + label {
-        background-image: url('./img/icon-down.svg');
+        background-image: url('./img/icon/icon-down.svg');
         background-repeat:no-repeat;
       }
       /* checked */
       &:checked + label {
-        background-image: url('./img/icon-up.svg');
+        background-image: url('./img/icon/icon-up.svg');
 
         background-repeat:no-repeat;
       }
