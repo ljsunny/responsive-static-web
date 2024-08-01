@@ -650,7 +650,7 @@ footer {
           cursor:pointer;
         }
       }
-      .accordion-header:has(span input:checked) ~ .accordion-wrapper {
+      .accordion-header:has(span > input[type=checkbox]:checked) ~ .accordion-wrapper {
         display:flex;
         flex-direction: column;
         overflow:wrap;
@@ -669,8 +669,8 @@ footer {
   }
 }
 
-/* Mobile */
-@media screen and (max-width:1000px) {
+/* Tablet, Mobile */
+@media screen and (max-width:992px) {
   banner {
     .right-wrap {
       display:none;
@@ -801,7 +801,7 @@ footer {
       }
     }
     /* accodion event */
-    .quick-title:has(span input:checked) ~ .accordion-wrap {
+    .quick-title:has(span input[type=checkbox]:checked) ~ .accordion-wrap {
       display:flex;
       flex-direction: column;
       overflow:wrap;

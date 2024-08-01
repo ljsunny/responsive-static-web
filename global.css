@@ -6,13 +6,8 @@
     /* Color */
     --color-white: #fff;
     --color-black: #000;
-    --color-blue: #0070d2;
     --color-green: #2c5234;
-    --color-primary: #00a1e0;
     --color-red: #8C1E28;
-    --color-success: var(--color-green);
-    --color-danger: var(--color-red);
-    --color-light-blue: #7ed0ee;
     --color-grey1: #f0f0f0;
     --color-grey2: #eee;
     --color-grey3: #ccc;
