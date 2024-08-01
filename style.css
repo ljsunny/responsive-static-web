@@ -672,6 +672,29 @@ footer {
   }
 }
 
+#page-404 {
+  background-color:var(--color-grey1);
+  h1 {
+    color: var(--color-green);
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  a {
+    color: var(--color-green);
+    font-weight: var(--weight-semi-bold);
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+  .container {
+      height: 62vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
 /* Tablet, Mobile */
 @media screen and (max-width:992px) {
   .banner {
