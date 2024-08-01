@@ -8,7 +8,7 @@ header {
   filter: drop-shadow(0 1mm 1mm rgba(0, 0, 0, .1));
 }
 
-banner {
+.banner {
   display:flex;
   background-color: var(--color-black);
 
@@ -671,7 +671,7 @@ footer {
 
 /* Tablet, Mobile */
 @media screen and (max-width:992px) {
-  banner {
+  .banner {
     .right-wrap {
       display:none;
     }
