@@ -3,9 +3,13 @@
 /* Desktop */
 header {
   position:fixed;
+  position:relative;
   width: 100%;
-  z-index:999;
+  z-index:998;
   filter: drop-shadow(0 1mm 1mm rgba(0, 0, 0, .1));
+  .modal-wrapper {
+    display:none;
+  }
 }
 
 .banner {
@@ -89,29 +93,22 @@ nav {
       margin-right:2rem;
     }
   }
-  .modal-wrapper {
-    background-color: #ccc;
-    width: 100vw;
-    height: 100vh;
-  }
-}
-main {
-  padding: 130px 0 0; 
 }
 .hero-section {
   background-image: url("./img/hp-hero-dsk.jpg");
   background-repeat : no-repeat;
-  background-position:bottom;
   background-size : cover;
-  height:100vh;
+  height:80vh;
   margin: 0 auto;
   position:relative;
+  animation: moveUp 3s forwards;
 
   h1, h2, a {
     color: var(--color-white);
     font-weight: normal;
     text-align:center;
     margin:0;
+    
   }
 
   .content {
@@ -173,6 +170,11 @@ main {
     justify-content: center;
     align-items: center;
 
+    
+    .product-wrapper {
+      flex-wrap:nowrap;
+      overflow:hidden;
+    }
     .arrow {
       display:flex;
       justify-content:center;
@@ -195,10 +197,7 @@ main {
     }
     .imgage-container {
       display:flex;
-      width: 1370px;
       gap: 30px;
-      flex-wrap:nowrap;
-      overflow:hidden;
 
       .box {
         width:320px;
@@ -235,7 +234,7 @@ main {
             width: 100%;
             background: rgba(0,0,0,.7);
             z-index:999;
-            transition: opacity 0.5s ease-in;
+            transition: opacity 0.1s ease-in;
 
             div {
               width: 50%;
@@ -697,6 +696,74 @@ footer {
 }
 /* Tablet, Mobile */
 @media screen and (max-width:992px) {
+  header {
+    .modal-wrapper {
+      position:absolute;
+      top:0;
+      left:-100vw;
+      background-color: var(--color-beige);
+      width: 100vw;
+      height: 100vh;
+      z-index:999;
+      transition: left 0.5s ease-in;
+
+      .modal-header {
+        width:90%;
+        margin: 80px auto 20px;
+        input {
+          width:100%;
+          border:none;
+          padding: 16px 16px 16px 27px;
+        }
+      }
+      .modal-body {
+        width:100%;
+        margin: 0 auto;
+        font-size: 0.95rem;
+        background-color: var(--color-lightbeige);
+        ul > a >li {
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          padding: 18px 5%;
+          border-bottom: 1px solid var(--color-beige);
+
+        }
+      }
+      .modal-bottom {
+        background-color:var(--color-white);
+        margin:0 0 auto 0;
+        ul > a >li {
+          display:flex;
+          align-items:center;
+          padding: 18px 5%;
+          border-bottom: 1px solid var(--color-beige);
+          img {
+            height:20px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .hambuger-icon-wrap {
+      display:block;
+      z-index:1000;
+      width: 100px;
+
+      input[type=checkbox] {
+        display:none;
+      }
+      label {
+        display:inline-block;
+        width: 24px;
+        height: 24px;
+        cursor:pointer;
+        background-image: url('../img/icon-hamburger.svg');
+        background-size: cover;
+      }
+    }
+  }
+
   .banner {
     .right-wrap {
       display:none;
@@ -709,17 +776,7 @@ footer {
     .nav-list {
       display:none;
     }
-    .hambuger-icon-wrap {
-      display:block;
-      width: 100px;
-      input {
-        width: 24px;
-        display:none;
-      }
-      label {
-        cursor:pointer;
-      }
-    }
+
     .icon-wrap{
       img{
         margin-right: 1.2rem;
@@ -729,6 +786,32 @@ footer {
       }
     }
   }
+
+  body:has(#hambuger-toggle[type=checkbox]:checked) {
+    overflow: hidden;
+    height:100vh;
+    header {
+      .modal-wrapper {
+        display:block;
+        left:0;
+      }
+      .hambuger-icon-wrap {
+        input + label {
+          position:absolute;
+          top:20%;
+          right:5%;
+          background-image: url('../img/icon-close.svg');
+          &:before {
+            position:absolute;
+            content:'close';
+            left: -50px;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+  }
   .hero-section {
     h1 {
       font-size: 3.5rem;
@@ -736,6 +819,14 @@ footer {
     }
     .content {
       .left {
+        display:none;
+      }
+    }
+  }
+  .container1 {
+    .slide-container {
+      padding: 0 10px;
+      .arrow {
         display:none;
       }
     }
@@ -749,8 +840,6 @@ footer {
       background-position: center center;
       justify-content:center;
       transition: background-size .3s ease;
-      -moz-transition: background-size .3s ease;
-      -web-kit-transition: background-size .3s ease;
 
       &:hover {
         background-position: center center;

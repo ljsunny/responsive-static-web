@@ -8,6 +8,8 @@
     --color-black: #000;
     --color-green: #2c5234;
     --color-red: #8C1E28;
+    --color-beige:#efefe5;
+    --color-lightbeige:#f7f7ee;
     --color-grey1: #f0f0f0;
     --color-grey2: #eee;
     --color-grey3: #ccc;
@@ -121,3 +123,14 @@
     margin: 0 auto;
   }
 
+  @keyframes moveUp {
+    0% {
+      background-position:top center;
+    }
+    50% {
+      background-position:50% center;
+    }
+    100% {
+      background-position:bottom center;
+    }
+  }
