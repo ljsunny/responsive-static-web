@@ -683,7 +683,11 @@ footer {
         padding: 20px 50px;
         flex-wrap: wrap;
         p {
-          white-space:pre-wrap;
+          white-space: normal; /* 자동 줄 바꿈 */
+          word-wrap: break-word; /* 긴 단어 줄 바꿈 */
+          overflow-wrap: break-word; /* 긴 단어 줄 바꿈 */
+          text-align: left; /* 왼쪽 정렬로 공백 문제 완화 */
+          
         }
       }
     }
